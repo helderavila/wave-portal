@@ -39,6 +39,8 @@ contract WavePortal {
 
     seed = randomNumber;
 
+    emit NewWave(msg.sender, block.timestamp, _message);
+
     if (randomNumber < 50) {
       console.log("%s won!", msg.sender);
 
